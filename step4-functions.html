@@ -38,7 +38,9 @@
             addme(1,2,3)
         }
         */
+        // fun1();
 
+/*
          function addme(...ibm){
             var tempval = 0
             for (var i = 0 ; i < ibm.length ; i++){
@@ -51,7 +53,26 @@
         console.log( addme(5,6) );
         console.log( addme(5,6,7) );
         console.log( addme(5,6,7,8) );
-        // fun1();
+*/
+/*
+    function sayname(msg, fname, lname){
+        var msg = msg || "hello";
+        var fname = fname || "guest";
+        var lname = lname || "";
+        return msg+" from "+fname+" "+lname
+    };
+    console.log( sayname("", "Bruce", "Wayne") );
+*/
+
+/*
+    function sayname(fname = "Guest" , lname = "", msg="Hello"){
+        return msg+" from "+fname+" "+lname
+    };
+    console.log( sayname("Bruce", "Wayne") );
+*/
+    var sayname =  msg =>  " kedar did "+msg ;
+    console.log( sayname("you call sayname function") );
+
     </script>
 </head>
 <body>

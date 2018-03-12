@@ -21,7 +21,8 @@
         };
         console.log(shop.salesValue());// 120
         */
-/*
+       /*
+      */
         var hero1 = {
             title : "Batman",
             firstname : "Bruce",
@@ -48,8 +49,9 @@
         console.log(hero1.fullname());
         console.log(hero1.fullname.call(hero2, "Mr"));
         console.log(hero1.fullname.apply(hero3, ["Mr"]));
-        console.log(hero1.fullname.bind(hero4)("Mr "));
-        */
+
+        var somevar = hero1.fullname.bind(hero4);
+        console.log(somevar("hello"));
 
          var shop = {
             purchaseValue : () => 100 ,
