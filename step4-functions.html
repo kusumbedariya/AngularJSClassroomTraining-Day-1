@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+    <script>
+        /*
+        var user = undefined;
+        function myfun1(){
+
+        };
+        var myfun2 = function(){
+
+        };
+        console.log(user);// undefined
+        console.log(user in window);// true
+        myfun1();
+        myfun2();
+        user = "batman";
+        console.log(user);// batman
+        */
+        /*
+        function addme(){
+            var tempval = 0
+            for (var i = 0 ; i < arguments.length ; i++){
+                tempval += arguments[i];
+            }
+           return tempval;
+        };
+        */
+        /*
+        function fun1(){
+            addme(5,6,7)
+        }
+        function fun2(){
+            addme(1,2,3)
+        }
+        */
+
+         function addme(...ibm){
+            var tempval = 0
+            for (var i = 0 ; i < ibm.length ; i++){
+                tempval += ibm[i];
+            }
+           return tempval;
+        };
+        console.log( addme() );
+        console.log( addme(5) );
+        console.log( addme(5,6) );
+        console.log( addme(5,6,7) );
+        console.log( addme(5,6,7,8) );
+        // fun1();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
