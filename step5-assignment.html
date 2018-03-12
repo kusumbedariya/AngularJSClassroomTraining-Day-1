@@ -6,15 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
+        /*
         var shop = {
             purchaseValue : function(){
                     return 100;
             },
             salesValue : function(){
-                    getprofit = function(){
-                        return purchaseValue() * 0.2
-                    }
-                    return purchaseValue()+getprofit();
+                // var self = this;
+                getprofit = function(){
+                    return this.purchaseValue() * 0.2
+                }
+                return this.purchaseValue()+getprofit.call(this);
+            }
+        };
+        console.log(shop.salesValue());// 120
+        */
+/*
+        var hero1 = {
+            title : "Batman",
+            firstname : "Bruce",
+            lastname : "Wayne",
+            fullname : function(title){
+                return title+" "+this.firstname+" "+this.lastname;
+            }
+        }
+        var hero2 = {
+            title : "Superman",
+            firstname : "Clark",
+            lastname : "Kent"
+        }
+        var hero3 = {
+            title : "Spiderman",
+            firstname : "Peter",
+            lastname : "Parker"
+        };
+        var hero4 = {
+            title : "Ironman",
+            firstname : "Tony",
+            lastname : "Stark"
+        };
+        console.log(hero1.fullname());
+        console.log(hero1.fullname.call(hero2, "Mr"));
+        console.log(hero1.fullname.apply(hero3, ["Mr"]));
+        console.log(hero1.fullname.bind(hero4)("Mr "));
+        */
+
+         var shop = {
+            purchaseValue : () => 100 ,
+            salesValue : function(){
+                getprofit = () => this.purchaseValue() * 0.2;
+                return this.purchaseValue()+getprofit.call(this);
             }
         };
         console.log(shop.salesValue());// 120
