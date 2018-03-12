@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Block Scope</title>
+    <script>
+        const hero = {
+            name : "Batman",
+            power : 6
+        };
+        /*
+        const city = "Gotham";
+        city = "Pune";
+        
+        */
+       function checkPower(){
+            if(hero.power > 5){
+                let tempval = "Batman is Strong";
+                hero.name = tempval;
+            }
+            // console.log(tempval);
+        };
+        checkPower();
+        console.log(hero.name);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

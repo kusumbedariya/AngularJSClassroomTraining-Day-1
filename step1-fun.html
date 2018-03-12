@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        */
+       window.addEventListener("load", windowaddeventlistener);
+      //window.onload = windowonload;
+        
+        function windowaddeventlistener(){
+           document.getElementsByTagName("h1")[0].innerHTML += "window.addeventlistener <br/>";
+        }
+        function bodyonload(){
+           document.getElementsByTagName("h1")[0].innerHTML += "bodyonload <br/>";
+        }
+        /*
+        function windowonload(){
+           document.getElementsByTagName("h1")[0].innerHTML += "window.windowonload <br/>";
+        }
+        */ 
+
+        document.addEventListener("DOMContentLoaded", domconentloaded)
+
+        function domconentloaded(){
+           document.getElementsByTagName("h1")[0].innerHTML += "domconentloaded <br/>";
+        }
+    </script>
+</head>
+<body onload="bodyonload()">
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ul>
+    <h1></h1>
+</body>
+</html>
