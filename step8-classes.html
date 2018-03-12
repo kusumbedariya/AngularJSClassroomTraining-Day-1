@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        var Hero = function(fn,ln){
+            this.firstname = fn;
+            this.lastname = ln;
+            var secret = "My Secret";
+            this.fullname = function(){
+                return this.firstname+" "+this.lastname
+            };
+        };
+        var hero1 = new Hero("Bruce","Wayne");
+        var hero2 = new Hero("Kit","Walker");
+        console.log(hero1.firstname, hero1.lastname);
+        console.log(hero1.fullname());
+        console.log("+++++++++++++++++++++++++++");
+        console.log(hero2.firstname, hero2.lastname);
+        console.log(hero2.fullname());
+        console.log(hero1.fullname === hero2.fullname);
+        */
+
+        class Hero{
+            /*
+           */
+            static secret(){
+                return "My Secret"
+            } 
+         //  static secret = "My Secret";
+            constructor(fn,ln){
+                this.firstname = fn;
+                this.lastname = ln;
+                this._city = "Gotham";
+            }
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+          get city(){
+                return this._city;
+            }
+          set city(newcity){
+                this._city = newcity;
+            }
+        };
+        class ComicHero extends Hero{
+            constructor(fn,ln,power){
+                super(fn,ln);
+                this.power = power
+            }
+        };
+        var hero3 = new ComicHero("Bruce","Wayne", 8);
+        console.log(hero3.firstname, hero3.lastname, hero3.power);
+
+        var hero1 = new Hero("Bruce","Wayne");
+        var hero2 = new Hero("Peter","Parker");
+        console.log(hero1.firstname, hero1.lastname, hero1.city);
+        console.log(hero1.fullname());
+        console.log("+++++++++++++++++++++++++++");
+        console.log(hero2.firstname, hero2.lastname);
+        console.log(hero2.fullname());
+        console.log(hero1.fullname === hero2.fullname);
+        console.log(Hero.secret());/// will work
+        console.log(hero1.secret());/// wont work
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
